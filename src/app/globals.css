@@ -1,0 +1,111 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 98%; /* Lighter Gray */
+    --foreground: 220 10% 23%; /* Dark Gray */
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 23%;
+    --primary: 217 91% 60%; /* New Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 94%; /* Light Gray */
+    --secondary-foreground: 220 10% 23%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 280 90% 60%; /* Vibrant Violet */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 217 85% 65%;
+    --chart-3: 217 80% 70%;
+    --chart-4: 217 75% 75%;
+    --chart-5: 217 70% 80%;
+  }
+
+  .dark {
+    --background: 220 10% 10%; /* Very Dark Gray */
+    --foreground: 220 20% 98%; /* Light Gray */
+    --card: 220 10% 15%; /* Dark Gray */
+    --card-foreground: 220 20% 98%;
+    --popover: 220 10% 15%;
+    --popover-foreground: 220 20% 98%;
+    --primary: 217 91% 65%; /* Brighter Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 10% 20%; /* Darker Gray */
+    --secondary-foreground: 220 20% 98%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 20% 60%;
+    --accent: 280 90% 65%; /* Brighter Violet */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 217 91% 65%;
+    --chart-1: 217 91% 65%;
+    --chart-2: 217 85% 70%;
+    --chart-3: 217 80% 75%;
+    --chart-4: 217 75% 80%;
+    --chart-5: 217 70% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  body.careers-page-bg,
+  body.about-page-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  body.careers-page-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1691178548430-6dc9774f414c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  
+  body.about-page-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1660902243601-28e451a873ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+}
+
+.careers-page-bg main > div > section,
+.about-page-bg main > div > section {
+    background-color: transparent !important;
+}
+
+.careers-page-bg .text-white,
+.about-page-bg .text-white {
+  color: white;
+}
+
+.careers-page-bg .text-gray-200,
+.about-page-bg .text-gray-200 {
+  color: #e5e7eb; /* Fallback for gray-200 */
+}
+
+.careers-page-bg .page-header h1,
+.careers-page-bg .page-header p,
+.about-page-bg .page-header h1,
+.about-page-bg .page-header p {
+  color: white;
+}
+
+.careers-page-bg .page-header,
+.about-page-bg .page-header {
+  background-color: transparent;
+}
